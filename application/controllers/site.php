@@ -14,6 +14,14 @@ class Site extends CI_Controller {
 		echo " something else";
 	}
 
+	public function addStuff(){
+
+		$this->load->model("math");
+
+		echo $this->math->add();
+
+	}
+
 	
 }
 
