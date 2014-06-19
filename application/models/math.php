@@ -1,9 +1,9 @@
 <?php 
 
-class math extends CI_Models{
+class math extends CI_Model{
 
-	public function add(){
-		return 1+2;
+	public function add($i,$j){
+		return $i+$j;
 	}
 }
 

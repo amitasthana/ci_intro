@@ -6,7 +6,7 @@ class Site extends CI_Controller {
 
 		echo "hi Internet: ";
 
-		$this->hello(); 
+		$this->addStuff(); 
 
 	}
 
@@ -18,7 +18,7 @@ class Site extends CI_Controller {
 
 		$this->load->model("math");
 
-		echo $this->math->add();
+		echo $this->math->add(2,2);
 
 	}
 
