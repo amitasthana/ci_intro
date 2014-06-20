@@ -4,23 +4,23 @@ class Site extends CI_Controller {
 
 	public function index(){
 
-		echo "hi Internet: ";
 
-		$this->addStuff(); 
+		$this->home(); 
+
+	}
+
+	public function home(){
+		$data['title'] = "Welcome! ";
+		$data['var1'] = 2;
+		$data['var2'] = 8;
+		$this->load->model('math');
+		$data['addTotal'] = $this->math->add($data['var1'],$data['var2']);
+		$data['subTotal'] = $this->math->sub($data['var1'],$data['var2']);
+		$this->load->view("view_home", $data);
 
 	}
 
-	public function hello(){
-		echo " something else";
-	}
-
-	public function addStuff(){
-
-		$this->load->model("math");
-
-		echo $this->math->add(2,2);
-
-	}
+	
 
 	
 }
