@@ -10,7 +10,7 @@ class Site extends CI_Controller {
 	}
 
 	public function home(){
-		$data['title'] = "Welcome! ";
+		$data['title'] = "Home! ";
 		$data['var1'] = 2;
 		$data['var2'] = 8;
 		$this->load->model('math');
@@ -21,7 +21,12 @@ class Site extends CI_Controller {
 	}
 
 	
+	 public function about()
+	{
+		$data['title'] = "About! ";
 
+		$this->load->view('view_about');
+	}
 	
 }
 
